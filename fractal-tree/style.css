@@ -1,0 +1,15 @@
+
+html, body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  p{
+      color: rgb(240, 30, 113);
+      margin-top:-10px;
+      font-size: 20px;
+  }
+  canvas {
+    display: block;
+  }
+  
