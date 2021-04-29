@@ -39,12 +39,11 @@ function setup() {
 }
 function draw() {
     background(255);
-    insertionSort();
+    a = insertionSort();
 }
 
 
 const insertionSort = () => {
-    //let i = 1;
     if (i < vals.length){
         let key = vals[i];
         j = i - 1;
@@ -77,10 +76,10 @@ const bubbleSort = () => {
         }
     }
     i += 1;
-    // for (let i = 0; i < vals.length; i++) {
-    //     stroke(0);
-    //     line(i, height, i, height - vals[i].height);
-    // }
+    for (let i = 0; i < vals.length; i++) {
+        stroke(0);
+        line(i, height, i, height - vals[i].height);
+    }
 }
 const swap = (arr, a, b) => {
     let temp = arr[a];
