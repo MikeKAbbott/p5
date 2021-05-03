@@ -1,0 +1,39 @@
+body{
+    color:#e4485b;
+    text-align: center;
+}
+p{
+    color:#34495E  
+}
+#user-input-button{
+    color: #e4485b;
+    background-color: white;
+    border: solid 1px #e4485b;
+    height:1.5rem;
+    width:10%;
+}
+#user-input-button:hover{
+    background-color:#e4485b;
+    color:white;
+}
+button:hover{
+    background-color:#e4485b;
+    color:white;
+}
+button{
+    color: #e4485b;
+    background-color: white;
+    border: solid 1px #e4485b;
+    margin:0;
+    padding:0;
+    margin-bottom:0.5rem;
+    height:3.5rem;
+    width:15%;
+}
+
+#guesses{
+    display: inline-flex;
+    flex-wrap: wrap;
+    
+
+}
