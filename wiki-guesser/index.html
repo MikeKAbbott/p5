@@ -10,7 +10,14 @@
   <body>
     <h2>Wiki Guesser</h2>
     <p>Guess the wikipedia page based on the excerpt</p>
-    <p id="wrapper">word: <input type="text" id="user-input"> <button type="button" id="user-input-button"> Search</button></p>
+    <div class="wrap" id="wrap">
+      <div class="search">
+         <input type="text" class="searchTerm" id="searchTerm" placeholder="Start with an initial search">
+         <button type="button" class="searchButton" id="searchButton">
+           Search
+        </button>
+      </div>
+   </div>    
     <p>Score: <span id="score">0</span></p>
     <div id="wiki-excerpt" hidden></div>
     <div id="guesses" hidden></div>

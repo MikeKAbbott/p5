@@ -5,35 +5,62 @@ body{
 p{
     color:#34495E  
 }
-#user-input-button{
-    color: #e4485b;
-    background-color: white;
-    border: solid 1px #e4485b;
-    height:1.5rem;
-    width:10%;
+input[type=text]{
+    width: 100%;
+    border: 3px solid #3AD39F;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #2980B9;
 }
-#user-input-button:hover{
-    background-color:#e4485b;
+
+input[type=text]:focus{
+    outline: none;
+}
+.search{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.searchButton{    
+    width: 70px;
+    height: 36px;
+    border: 1px solid #3AD39F;
+    background: #3AD39F;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+.searchButton:hover{
+    background-color:#2980B9;
     color:white;
 }
+.wrap{
+    width: 30%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 button:hover{
-    background-color:#e4485b;
-    color:white;
+    transform: scale(0.98);
 }
 button{
     color: #e4485b;
     background-color: white;
     border: solid 1px #e4485b;
-    margin:0;
-    padding:0;
+    padding:10px;
     margin-bottom:0.5rem;
-    height:3.5rem;
-    width:15%;
+    height:6rem;
+    width:20%;
 }
 
 #guesses{
-    display: inline-flex;
-    flex-wrap: wrap;
-    
-
+    display: inline-block;
 }
+
