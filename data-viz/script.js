@@ -33,7 +33,8 @@ function resetCanvas(){
 function setup() {
     width *= 4;
     height *= 4;
-    createCanvas(width, height);
+    const canvas = createCanvas(width, height);
+    canvas.parent("draw");
     resetCanvas();
 
 }

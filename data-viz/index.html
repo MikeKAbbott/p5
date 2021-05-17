@@ -8,12 +8,22 @@
     <meta charset="utf-8" />
   </head>
   <body>
-    <h2>Visualizaing Algorithms</h2>
-    <p>Inspired by Mike Bostock</p>
-    <label for="bubble-sort">Bubble Sort</label>
-    <input type="radio" id="bubble-sort" name="algorithm" value="bubblesort" checked>
-    <label for="insertion-sort">Insertion Sort</label>
-    <input type="radio" id="insertion-sort" name="algorithm" value="insertionsort">
+    <div class="mka-container">
+      <div class="mka-grid mka-center">
+          <div class="mka-grid_item-xlg">
+              <h1 class="mka-text-color-red">Data Visualization</h1>
+          </div>
+          <div class="mka-grid_item-xlg mka-height-full">
+            <p>P5js data visualization in real time</p>
+            <label for="bubble-sort">Bubble Sort</label>
+            <input type="radio" id="bubble-sort" name="algorithm" value="bubblesort" checked>
+            <label for="insertion-sort">Insertion Sort</label>
+            <input type="radio" id="insertion-sort" name="algorithm" value="insertionsort">
+          </div>
+          <div class="mka-grid_item-xlg mka-height-full" id="draw"></div>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
   </body>
 </html>
