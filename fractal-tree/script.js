@@ -1,3 +1,6 @@
+//Michael Abbott
+//Japanese Cherry Blossom Fractal Tree
+
 function Branch(begin, end) {
     this.begin = begin;
     this.end = end;
@@ -35,7 +38,8 @@ var summerTree = [];
 var leaves = [];
 var count = 0;
 function setup() {
-    createCanvas(displayWidth, displayHeight);
+    const canvas = createCanvas(displayWidth, displayHeight);
+    canvas.parent("draw");
     var a = createVector(width / 2, height - 300);
     var b = createVector(width / 2, height - 500);
     var root = new Branch(a, b);
