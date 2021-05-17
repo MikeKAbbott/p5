@@ -42,7 +42,8 @@ function Clock(){
 }
 
 function setup() {
-  createCanvas(400, 400);
+  const canvas = createCanvas(600, 600);
+  canvas.parent("draw");
   angleMode(DEGREES);
   let clock = new Clock();
   clock.tick();
@@ -74,7 +75,7 @@ function draw() {
 
   
 
-  translate(200,200);
+  translate(300,300);
   rotate(-90);
 
   //seconds rotation
@@ -82,7 +83,7 @@ function draw() {
   rotate(secondsAngle);
   strokeWeight(4);
   stroke(255);
-  line(0,0,45,0);
+  line(0,0,55,0);
   pop();
 
   //minutes rotation
@@ -90,7 +91,7 @@ function draw() {
   rotate(minutesAngle);
   strokeWeight(5);
   stroke(41, 128, 185);
-  line(0,0,58,0);
+  line(0,0,70,0);
   pop();
 
   //hours rotation
@@ -98,7 +99,7 @@ function draw() {
   rotate(hourAngle);
   strokeWeight(6);
   stroke(75, 80, 87);
-  line(0,0,65,0);
+  line(0,0,85,0);
   pop();
   
 }
