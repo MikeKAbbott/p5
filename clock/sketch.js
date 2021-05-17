@@ -1,13 +1,20 @@
+//Michael Abbott
+//Basic clock made with p5js
+
+
 let secondsAngle;
 let minutesAngle;
 let hourAngle;
 
-function clock(){
+//clock ~class function that handles the time
+function Clock(){
+  let currentTime = new Date();
   var self = this;
-  self.seconds = 0;
-  self.minutes = 0;
-  self.hour = 0;
+  self.seconds = currentTime.getSeconds();
+  self.minutes = currentTime.getMinutes();
+  self.hour = currentTime.getHours();
   self.tick = function(){
+    self.tock();
     setInterval(function(){
       self.tock();
       self.seconds += 1;
@@ -24,7 +31,8 @@ function clock(){
       }
       },1000)
   }
-  
+
+  //update the line angle based on the time
   self.tock = function(){
       secondsAngle = map(this.seconds, 0, 60, 0, 360);
       minutesAngle = map(this.minutes,0,60,0,360);
@@ -36,69 +44,61 @@ function clock(){
 function setup() {
   createCanvas(400, 400);
   angleMode(DEGREES);
-  let time = new clock();
-  time.tick();
+  let clock = new Clock();
+  clock.tick();
 }
 
 function draw() {
   background(50);
   strokeWeight(0);
+  
+  //purple first circle
   fill(155, 89, 182);
   ellipse(width/2, height/2, width/2, height/2);
   
+  //blue green second circle
   fill(69, 179, 157 );
   ellipse(width/2, height/2, width/2.2, height/2.2);
   
+  //yellow third circle
   fill(245, 176, 65)
   ellipse(width/2, height/2, width/2.5, height/2.5);
   
+  //pink base circle
+  fill('#ed225d');
+  ellipse(width/2, height/2, width/2.7, height/2.7);
   
+  //green hand cirlce
   fill(25, 111, 61)
   ellipse(width/2, height/2, width/25, height/25);
-  
-  //seconds hand
-  strokeWeight(4);
-  stroke(231, 76, 60);
-  line(0,0,50,0);
 
-  //minutes hand
-  strokeWeight(5);
-  stroke(41, 128, 185);
-  line(0,0,60,0);
-
-  //hour hand
-  strokeWeight(6);
-  stroke(75, 80, 87);
-  line(0,0,75,0);
   
-  //seconds rotation
-  push();
+
   translate(200,200);
   rotate(-90);
+
+  //seconds rotation
+  push();
   rotate(secondsAngle);
   strokeWeight(4);
-  stroke(231, 76, 60);
-  line(0,0,50,0);
+  stroke(255);
+  line(0,0,45,0);
   pop();
 
   //minutes rotation
   push();
-  translate(200,200);
-  rotate(-90);
   rotate(minutesAngle);
   strokeWeight(5);
   stroke(41, 128, 185);
-  line(0,0,60,0);
+  line(0,0,58,0);
   pop();
 
-  //minutes rotation
+  //hours rotation
   push();
-  translate(200,200);
-  rotate(-90);
   rotate(hourAngle);
   strokeWeight(6);
   stroke(75, 80, 87);
-  line(0,0,75,0);
+  line(0,0,65,0);
   pop();
   
 }
