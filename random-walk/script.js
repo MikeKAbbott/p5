@@ -1,8 +1,9 @@
 
 function setup() {
-    createCanvas(displayWidth, displayHeight);
+    const canvas = createCanvas(600, 600);
+    canvas.parent("draw");
     textSize(32);
-    walker = new walk(displayWidth / 2, displayHeight / 2);
+    walker = new walk(width / 2, height / 2);
     background(255);
 
 }
@@ -40,8 +41,8 @@ class walk{
             this.newColor();
             this.count = 0;
         }
-        this.pos.x += random(this.minVal.value(), this.maxVal.value());
-        this.pos.y += random(this.minVal.value(), this.maxVal.value());;
+        this.pos.x += random(this.minVal.value(), this.maxVal.value()) < width ? random(this.minVal.value(), this.maxVal.value()) : -random(this.minVal.value(), this.maxVal.value());
+        this.pos.y += random(this.minVal.value(), this.maxVal.value()) < height ? random(this.minVal.value(), this.maxVal.value()) : -random(this.minVal.value(), this.maxVal.value()) ;
         this.count += 1;
     }
     newColor(){

@@ -1,4 +1,356 @@
-body{
+/* 
+Michael Abbott
+Personal css framework
+*/
+
+/* Base html elements */
+/* <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet"> */
+html{
+    font-family: 'Merriweather', serif;
+    background-color:#ffffff;
+    scroll-behavior: smooth;
+    line-height: 1.5;
+}
+
+fieldset{
+    border:none;
+    overflow: hidden
+}
+
+.mka-input-text {
+    /* display: block; */
+    width: 100%;
+    border-radius: .25rem;
+    background-color: inherit;
+    border: 1px solid #666;
+    padding: .5rem;
+    height: 1.5rem;
+}
+
+.mka-input-text:focus {
+    outline:none;
+    border:2px solid #F39C12;
+}
+
+.mka-input-radio{
+    width:40px;
+    height:1.2rem;
+}
+
+.mka-button{
+    background-color: #ffffff;
+    border: .125rem solid #e4485b;
+    border-radius: .25rem;
+    color: #e4485b;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 1;
+    text-decoration: none;
+    position: relative;
+    height: 2.5rem;
+    padding: 0 .75rem;
+    display: inline-flex;
+    align-items: center;
+    transition: box-shadow .2s ease;
+}
+
+.mka-button:hover{
+    transform: scale(0.98);
+}
+/* Text color pallet */
+.mka-text-color-light-grey{
+    background-color:#E5E7E9;
+}
+.mka-text-color-grey{
+    color:#34495E;
+}
+.mka-text-color-blue{
+    color:#2980B9;
+}
+.mka-text-color-red{
     color:#e4485b;
+}
+.mka-text-color-yellow{
+    color:#F39C12;
+}
+.mka-text-color-green{
+    color:#3AD39F;
+}
+
+/* Background color pallet */
+.mka-background-color-light-grey{
+    background-color:#E5E7E9;
+}
+.mka-background-color-grey{
+    background-color:#34495E;
+}
+.mka-background-color-blue{
+    background-color:#2980B9;
+}
+.mka-background-color-red{
+    background-color:#e4485b;
+}
+.mka-background-color-yellow{
+    background-color:#F39C12;
+}
+.mka-background-color-green{
+    background-color:#3AD39F;
+}
+
+
+/* Some basics */
+.mka-center{
     text-align: center;
+}
+
+.mka-text-bold{
+    font-weight:bold;
+}
+
+/* Text sizes */
+.mka-ts-xsm{
+    font-size: 0.85rem;
+}
+.mka-ts-sm{
+    font-size: 1rem;
+}
+.mka-ts-md{
+    font-size: 1.5rem;
+}
+.mka-ts-lg{
+    font-size: 2.5rem;
+}
+.mka-ts-xlg{
+    font-size: 3rem;
+}
+
+/* Margins */
+.mka-margin-top-xsm{
+    margin-top:0.5rem;
+}
+.mka-margin-top-sm{
+    margin-top:1rem;
+}
+.mka-margin-top-md{
+    margin-top:1.5rem;
+}
+.mka-margin-top-lg{
+    margin-top:2rem;
+}
+.mka-margin-top-xlg{
+    margin-top:2.5rem;
+}
+.mka-margin-bottom-xsm{
+    margin-bottom:0.5rem;
+}
+.mka-margin-bottom-sm{
+    margin-bottom:1rem;
+}
+.mka-margin-bottom-md{
+    margin-bottom:1.5rem;
+}
+.mka-margin-bottom-lg{
+    margin-bottom:2rem;
+}
+.mka-margin-bottom-xlg{
+    margin-bottom:2.5rem;
+}
+.mka-margin-left-xsm{
+    margin-left:0.5rem;
+}
+.mka-margin-left-sm{
+    margin-left:1rem;
+}
+.mka-margin-left-md{
+    margin-left:1.5rem;
+}
+.mka-margin-left-lg{
+    margin-left:2rem;
+}
+.mka-margin-left-xlg{
+    margin-left:2.5rem;
+}
+.mka-margin-right-xsm{
+    margin-right:0.5rem;
+}
+.mka-margin-right-sm{
+    margin-right:1rem;
+}
+.mka-margin-right-md{
+    margin-right:1.5rem;
+}
+.mka-margin-right-lg{
+    margin-right:2rem;
+}
+.mka-margin-right-xlg{
+    margin-right:2.5rem;
+}
+
+/* Paddings */
+.mka-padding-top-xsm{
+    padding-top:0.5rem;
+}
+.mka-padding-top-sm{
+    padding-top:1rem;
+}
+.mka-padding-top-md{
+    padding-top:1.5rem;
+}
+.mka-padding-top-lg{
+    padding-top:2rem;
+}
+.mka-padding-top-xlg{
+    margin-top:2.5rem;
+}
+.mka-padding-bottom-xsm{
+    padding-bottom:0.5rem;
+}
+.mka-padding-bottom-sm{
+    padding-bottom:1rem;
+}
+.mka-padding-bottom-md{
+    padding-bottom:1.5rem;
+}
+.mka-padding-bottom-lg{
+    padding-bottom:2rem;
+}
+.mka-padding-bottom-xlg{
+    margin-bottom:2.5rem;
+}
+.mka-padding-left-xsm{
+    padding-left:0.5rem;
+}
+.mka-padding-left-sm{
+    padding-left:1rem;
+}
+.mka-padding-left-md{
+    padding-left:1.5rem;
+}
+.mka-padding-left-lg{
+    padding-left:2rem;
+}
+.mka-padding-left-xlg{
+    margin-left:2.5rem;
+}
+.mka-padding-right-xsm{
+    padding-right:0.5rem;
+}
+.mka-padding-right-sm{
+    padding-right:1rem;
+}
+.mka-padding-right-md{
+    padding-right:1.5rem;
+}
+.mka-padding-right-lg{
+    padding-right:2rem;
+}
+.mka-padding-right-xlg{
+    margin-right:2.5rem;
+}
+
+/* Widths */
+.mka-width-xsm{
+    width:15% !important;
+}
+.mka-width-sm{
+    width:25% !important;
+}
+.mka-width-md{
+    width:45% !important;
+}
+.mka-width-lg{
+    width:55% !important;
+}
+.mka-width-xlg{
+    width:75% !important;
+}
+.mka-width-full{
+    width:100% !important;
+}
+
+/* Heights */
+.mka-height-xs{
+    height:15%;
+}
+.mka-height-sm{
+    height:25%;
+}
+.mka-height-md{
+    height:45%;
+}
+.mka-height-lg{
+    height:55%;
+}
+.mka-height-xlg{
+    height:75%;
+}
+.mka-height-full{
+    width:100%;
+}
+
+/* container css */
+.mka-container{
+    margin: 0 auto;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+.mka-container-xsm{
+    max-width:640px;
+}
+.mka-container-sm{
+    max-width: 1024px;
+}
+.mka-container-md{
+    max-width: 1140px;
+}
+.mka-container-lg{
+    max-width: 1380px
+}
+
+/* grid css*/
+.mka-grid{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/* grid item css */
+.mka-grid_item-xsm{
+    flex-basis: 33.3333%;
+    max-width: 33.3333%;
+}
+.mka-grid_item-sm{
+    flex-basis: 45.3333%;
+    max-width: 55.3333%;
+}
+.mka-grid_item-md{
+    flex-basis: 58.3333%;
+    max-width: 58.3333%;
+}
+.mka-grid_item-lg{
+    flex-basis: 75.3333%;
+    max-width: 75.3333%;
+}
+.mka-grid_item-xlg{
+    flex-basis: 99.3333%;
+    max-width: 99.3333%;
+}
+
+/* Border break */
+.mka-border-break{
+    border: none;
+    border-bottom:1px solid #dadce0; 
+}
+
+/* Inline list styling */
+.mka-inline-list{
+    list-style: none;
+    padding: 0
+}
+.mka-inline-list li{
+    display: inline-block;
+    line-height: 1;
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    margin-bottom: .5rem;
 }
